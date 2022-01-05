@@ -1,0 +1,21 @@
+<mat-card
+        [class]="(!loading && character === null) ? 'home mat-elevation-z3 container fade-in-card' : 'home mat-elevation-z3 container fade-out-card'"
+        *ngIf="!loading && character === null">
+    <mat-card-content class="content">
+        <span class="card-content">Agora, digite seu personagem favorito de Star Wars</span>
+        <br><br>
+        <app-input
+                (inputValue)="characterName = $event"
+                (validated)="isInputValid = $event"
+                [placeholderText]="''"
+                [invalidFeedbackMessage]="'Personagem inválido'"
+                [required]="true"
+                [minInput]="3"
+        ></app-input>
+        <app-button [buttonClass]="isInputValid ? 'enabled' : 'disabled'" (click)="characterRequest()"></app-button>
+    </mat-card-content>
+</mat-card>
+
+<mat-card class="home mat-elevation-z3 container fade-in-card" *ngIf="loading">
+    <app-input-card-loader [show]="loading"></app-input-card-loader>
+</mat-card>

@@ -1,0 +1,17 @@
+<mat-card id="rootLogin" class="mat-elevation-z3 container fade-in-card">
+    <mat-card-title class="title">
+        Olá!
+    </mat-card-title>
+
+    <mat-card-content class="content">
+        <span class="card-content">Para começar seu teste, digite um e-mail:</span>
+        <br><br>
+        <app-input
+                (inputValue)="email = $event"
+                (validated)="isInputValid = $event"
+                [required]="false"
+                [minInput]="3"
+        ></app-input>
+        <app-button [buttonClass]="isInputValid ? 'enabled' : 'disabled'" (click)="login()"></app-button>
+    </mat-card-content>
+</mat-card>

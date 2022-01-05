@@ -1,0 +1,11 @@
+<div class="container">
+    <input
+            [type]="fieldType"
+            [placeholder]="placeholderText"
+            [required]="required"
+            [class]="inputClass"
+            [(ngModel)]="valueField"
+            (keyup)="validate($event.target.value)"
+    >
+    <span *ngIf="inputClass === 'danger'">{{invalidFeedbackMessage}}</span>
+</div>

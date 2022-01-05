@@ -1,0 +1,37 @@
+.container {
+    width: 410px;
+    height: 220px;
+
+    margin-right: auto;
+    margin-left: auto;
+
+    padding: 1.5rem;
+
+    background-color: rgb(35, 35, 35);
+    color: #CECECE;
+    font-weight: lighter;
+
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.content {
+    margin-top: .75rem;
+}
+
+.content > * {
+    padding-top: 1rem;
+}
+
+.card-content {
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.title {
+    margin: 8px;
+    font-size: 30px;
+    line-height: 38px;
+    font-weight: normal;
+}

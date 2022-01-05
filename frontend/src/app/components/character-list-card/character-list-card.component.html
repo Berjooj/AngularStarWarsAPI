@@ -1,0 +1,66 @@
+<mat-card class="home mat-elevation-z3 container fade-in-card">
+    <mat-card-title class="title">
+        Informações sobre {{character.name}}:
+    </mat-card-title>
+
+    <mat-card-content class="content">
+        <br>
+        <span class="card-content">Filmes:</span>
+        <div class="badgeContainer">
+            <div class="badgeEmpty" *ngIf="!character.films.length">
+                <span>N/A</span>
+            </div>
+
+            <div class="badge" *ngFor="let film of character.films">
+                <span>{{film}}</span>
+            </div>
+        </div>
+
+        <span class="card-content">Naves:</span><br>
+        <div class="badgeContainer">
+            <div class="badgeEmpty" *ngIf="!character.starships.length">
+                <span>N/A</span>
+            </div>
+
+            <div class="badge" *ngFor="let starship of character.starships">
+                <span>{{starship}}</span>
+            </div>
+        </div>
+
+        <span class="card-content">Veículos:</span><br>
+        <div class="badgeContainer">
+            <div class="badgeEmpty" *ngIf="!character.vehicles.length">
+                <span>N/A</span>
+            </div>
+
+            <div class="badge" *ngFor="let vehicle of character.vehicles">
+                <span>{{vehicle}}</span>
+            </div>
+        </div>
+
+        <span class="card-content">Espécie:</span><br>
+        <div class="badgeContainer">
+            <div class="badgeEmpty" *ngIf="!character.species.length">
+                <span>N/A</span>
+            </div>
+
+            <div class="badge" *ngFor="let specie of character.species">
+                <span>{{specie}}</span>
+            </div>
+        </div>
+
+        <span class="card-content">Planeta:</span><br>
+        <div class="badgeContainer">
+            <div class="badgeEmpty" *ngIf="!character.planets.length">
+                <span>N/A</span>
+            </div>
+
+            <div class="badge" *ngFor="let planet of character.planets">
+                <span>{{planet}}</span>
+            </div>
+        </div>
+
+        <br>
+        <app-button textButton="Pesquisar Novamente" buttonClass="enabled" (click)="newRequest()"></app-button>
+    </mat-card-content>
+</mat-card>

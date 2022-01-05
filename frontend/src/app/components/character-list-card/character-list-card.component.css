@@ -1,0 +1,85 @@
+.container {
+    max-width: 410px;
+    margin-right: auto;
+    margin-left: auto;
+
+    padding: 1.5rem;
+
+    background-color: rgb(35, 35, 35);
+    color: whitesmoke;
+    font-weight: lighter;
+
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.content {
+    margin-top: .75rem;
+}
+
+.content > * {
+    padding-top: 1rem;
+}
+
+.card-content {
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.title {
+    margin: 8px 0;
+    font-size: 30px;
+    line-height: 38px;
+    font-weight: normal;
+}
+
+.badgeContainer {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    margin: 4px 4px 16px 4px;
+    padding-top: 0 !important;
+}
+
+.badgeEmpty {
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 8px;
+    color: gray;
+    border: 1px solid #5d5d5d;
+
+    padding: .1rem .5rem .05rem .5rem;
+    width: fit-content;
+}
+
+.badge, .badgeEmpty {
+    border-radius: 4px;
+
+    height: 28px;
+    margin: 4px;
+
+    padding: 0 8px;
+
+    width: fit-content;
+}
+
+.badge {
+    background-color: #353535;
+}
+
+.badgeEmpty {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.badge * {
+    color: #DFDFDF;
+}
+
+.badgeEmpty * {
+    color: #FFFFFF52;
+}
+
+.badge *, .badgeEmpty * {
+    font-size: 12px;
+    line-height: 28px;
+}

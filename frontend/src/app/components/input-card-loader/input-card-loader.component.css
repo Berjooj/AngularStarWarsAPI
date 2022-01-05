@@ -1,0 +1,91 @@
+.card-loader {
+    display: flex;
+    flex-flow: column;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-loader img {
+    margin-bottom: 1rem;
+
+    animation: loading 1.5s;
+    -webkit-animation: loading 1.5s;
+    -moz-animation: loading 1.5s;
+    -o-animation: loading 1.5s;
+    -ms-animation: loading 1.5s;
+
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    -ms-animation-iteration-count: infinite;
+}
+
+:host {
+    display: block;
+}
+
+.fade {
+    opacity: 0;
+}
+
+@keyframes loading {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: .7;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes loading {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: .7;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes loading {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: .7;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes loading {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: .7;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes loading {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: .7;
+    }
+    100% {
+        opacity: 1;
+    }
+}
