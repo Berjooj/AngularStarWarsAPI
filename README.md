@@ -1,50 +1,57 @@
+# Documentation
 
-[![Hackerman.](https://c.tenor.com/xuNo8NDdwIkAAAAd/hackerman.gif)](https://synth.codes)
+## Introduction
+
+Welcome to the swapi, the Star Wars API! This documentation should help you familiarise yourself with the resources
+available and how to consume them with HTTP requests. If you're after a native helper library then I suggest you scroll
+down and check out what's available. Read through the getting started section before you dive in. Most of your problems
+should be solved just by reading through it.
+
+## Getting started
+
+Let's make our first API request to the Star Wars API!
+
+Open up a terminal and use curl or httpie to make an API request for a resource. In the example below, we're trying to
+get the first planet, Tatooine:
+
+```
+    http swapi.dev/api/planets/1/
+```
+
+Here is the response we get:
+```
+
+    HTTP/1.0 200 OK
+    Content-Type: application/json
+    {
+    "climate": "Arid",
+    "diameter": "10465",
+    "gravity": "1 standard",
+    "name": "Tatooine",
+    "orbital_period": "304",
+    "population": "200000",
+    "residents": [
+    "https://swapi.dev/api/people/1/",
+    "https://swapi.dev/api/people/2/",
+    ...
+    ],
+    "rotation_period": "23",
+    "surface_water": "1",
+    "terrain": "Dessert",
+    "url": "https://swapi.dev/api/planets/1/"
+    }
+
+```
+
+If your response looks slightly different don't panic. This is probably because more data has been added to swapi since we made this documentation.
+
+## Base URL
+
+The Base URL for swapi is:
+```
+    https://swapi.dev/api/ 
+```
 
 
-# Desafio Hackerman | Front-End
 
-Hello there! 👋
-
-Você foi selecionado para nosso teste de Front-End. Você deve:
-
-- Criar uma single page application utilizando os arquivos do protótipo abaixo;
-- Obter os dados através da API -> https://swapi.dev/documentation;
-- Entregar a sua implementação do desafio neste repositório.
-
-
-## Arquivos Relacionados
-
-[Protótipo Navegável](https://www.figma.com/proto/8QutE5PbNea4Q4hi8T91rv/Hackerman-s-Challenge?page-id=0%3A1&node-id=3%3A2&viewport=494%2C378%2C0.13534130156040192&scaling=min-zoom&starting-point-node-id=3%3A2&hide-ui=1)
-
-[Projeto no Figma](https://www.figma.com/file/8QutE5PbNea4Q4hi8T91rv/Hackerman-s-Challenge?node-id=0%3A1)
-
-[Assets](https://drive.google.com/drive/folders/1f-a81FiT-SyGGxO7bmoB91X12oY9t2wW?usp=sharing)
-
-## Tecnologias
-
-Recomendamos utilizar as seguintes tecnologias para desenvolver o seu projeto:
-
-- Angular 12 (Routing e SCSS) ou React (Hooks e SASS Modules);
-- HTML/CSS;
-- Git.
-
-## Instruções
-
-- A primeira página deve exibir um campo solicitando o e-mail do usuário. Caso o e-mail digitado não tenha no mínimo 3 caracteres e o caracter "@", deve-se mostrar uma mensagem de erro. Enquanto o e-mail não estiver correto, o botão para o próximo slide deve ser bloqueado.
-
-- A segunda página somente poderá ser acessada por quem digitou o endereço de e-mail corretamente conforme os critérios do item #1. Ali haverá um campo de texto pedindo o nome de um dos personagens do Star Wars (exemplos que funcionam na API sugerida: "Darth Vader" e "R2-D2").
-
-- Ao fazer a busca, deverá mostrar um estado de "loading" enquanto o resultado da API não é obtido (atenção para o ícone que deve aparecer e desaparecer enquanto o resultado não foi retornado).
-
-- Exibir informações obtidas pela API conforme desenhado. Salvar o resultado quando acessar a página novamente.
-
-> Utilizar o sistema de rotas para cada uma das páginas (com excessão do "loading" que será junto com o segundo slide)
-
-
-## Recomendações
-
-- Tenha atenção com a parte visual;
-- Organize suas tarefas criando issues;
-- Crie componentes para reaproveitar código.
-
+###### Source: https://swapi.dev/documentation#intro
